@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* general section styling */
+.section-container {
+    padding: 0 12vw;
+}
+
+.secondary-heading {
+    color: #e2af80;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 7vw;
+    padding-top: 60px;
+}
+
+/* section 1 styling - INTRO PAGE */
+#section-1 {
+    background-color: #9cb390;
+    height: calc(100vh - 120px);
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+
+.section1-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: #1c2e1e;
+}
+
+h1 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 10.4vw;
+    text-align: center;
+    margin: 7vh 0 10vh 0;
+    padding: 0;
+}
+
+.pink-wrapper {
+    background-color: #e2af80;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    margin-left: -12vw;
+}
+
+.pink-wrapper .introText-container {
+    margin-left: 12vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15vh;
+}
+
+.pink-wrapper .introText-container h2 {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.pink-wrapper .introText-container p {
+    font-size: 1.2em;
+}
+
+.myImage-container img {
+    width: 45vh;
+    height: 45vh;
+    border: 1.5px solid #1c2e1e;
+    position: relative;
+    top: -2vh;
+    right: 12vw;
+}
+
+#section-1 .scroll-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    font-size: 0.9em;
+    margin-top: 10vh;
+}
+
+/* section 2,3 styling - PROJECTS PAGE */
+
+/* project page headings */
+#section-2,
+#section-3 {
+    background-color: #9cb390;
+    margin-top: -20px;
+}
+
+.section2-wrapper {
+    background-color: #1a271c;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-bottom: 100px;
+}
+
+.section3-wrapper {
+    background-color: #1a271c;
+    padding-bottom: 100px;
+}
+
+#section-2 .project-number {
+    margin: 5vh 0;
+}
+
+#section-3 .project-number {
+    padding: 10vh 0 5vh 0;
+}
+
+.project-number p {
+    font-size: 4em;
+    color: #afbda8;
+    font-family: "Hanken Grotesk", sans-serif;
+    margin: 0;
+}
+
+.project-number .horizontal-underline {
+    height: 2px;
+    width: 100%;
+    background-color: #afbda8;
+}
+
+/* project page descriptions */
+.project-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.project-description {
+    width: 35%;
+}
+
+.project-description h4 {
+    color: #e2af80;
+    margin: 0;
+}
+
+.project-description p {
+    color: #afbda8;
+    text-align: justify;
+    line-height: 1.7em;
+    margin: 1em 0;
+}
+
+.project-description .technologies {
+    margin-top: 40px;
+}
+
+.project-description div {
+    background-color: #e2af80;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 7px;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.project-description div p {
+    color: #1c2e1e;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.project-video {
+    width: 65%;
+}
+
+.project-video img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+/* section 4 styling - ABOUT ME PAGE */
+#section-4 {
+    background-color: #9cb390;
+    margin-top: -20px;
+}
+
+.section4-wrapper {
+    background-color: #1a271c;
+    padding-bottom: 100px;
+}
+
+/* section 4 - my description styling */
+.my-description {
+    width: 100vw;
+    margin-top: 40px;
+    margin-left: -12vw;
+    background-image: url("./img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-description div {
+    padding: 0 12vw;
+}
+
+.myDescription-text p {
+    text-align: center;
+    font-weight: 400;
+    font-family: "Hanken Grotesk", sans-serif;
+    /* font-style: italic; */
+    letter-spacing: 0.02em;
+    margin: 0;
+    color: #ecf8dc;
+    line-height: 1.7em;
+    font-size: 1.2em;
+    margin: 50px 0;
+}
+
+.myDescription-images {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.myDescription-images img {
+    height: 40px;
+    width: auto;
+}
