@@ -17,10 +17,6 @@ h3 {
 }
 
 /* general section styling */
-.section-container {
-    padding: 0 12vw;
-}
-
 .secondary-heading {
     color: #e2af80;
     font-family: "Hanken Grotesk", sans-serif;
@@ -28,13 +24,17 @@ h3 {
     font-weight: 900;
     font-style: normal;
     font-size: 7vw;
+    padding: 0 12vw;
+}
+
+.secondary-heading h3 {
     padding-top: 60px;
 }
 
 /* section 1 styling - INTRO PAGE */
 #section-1 {
     background-color: #9cb390;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 70px);
     width: 100%;
     position: relative;
     top: -20px;
@@ -54,7 +54,7 @@ h1 {
     font-size: 10.4vw;
     text-align: center;
     margin: 7vh 0 10vh 0;
-    padding: 0;
+    padding: 0 12vw;
 }
 
 .pink-wrapper {
@@ -62,17 +62,15 @@ h1 {
     height: 30vh;
     display: flex;
     justify-content: space-between;
-    width: 100vw;
-    margin-left: -12vw;
+    width: 100%;
 }
 
 .pink-wrapper .introText-container {
-    margin-left: 12vw;
     height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 15vh;
+    padding-left: 12vw;
 }
 
 .pink-wrapper .introText-container h2 {
@@ -97,38 +95,50 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 30%;
     font-size: 0.9em;
     margin-top: 10vh;
 }
 
+.scroll-wrapper {
+    padding: 0 12vw;
+}
+
 /* section 2,3 styling - PROJECTS PAGE */
+
+.dark-background {
+    background: linear-gradient(45deg, #1a271c, #1c2e1e, #314533);
+    border-radius: 30px;
+    width: 100%;
+    position: relative;
+    top: -30px;
+    z-index: 100;
+}
 
 /* project page headings */
 #section-2,
 #section-3 {
-    background-color: #9cb390;
     margin-top: -20px;
+    width: 100%;
 }
 
 .section2-wrapper {
-    background-color: #1a271c;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
     padding-bottom: 100px;
+    width: 100%;
 }
 
 .section3-wrapper {
-    background-color: #1a271c;
     padding-bottom: 100px;
 }
 
 #section-2 .project-number {
     margin: 5vh 0;
+    padding: 0 12vw;
 }
 
 #section-3 .project-number {
-    padding: 10vh 0 5vh 0;
+    margin-bottom: 5vh;
+    padding: 0 12vw;
 }
 
 .project-number p {
@@ -146,11 +156,15 @@ h1 {
 
 /* project page descriptions */
 .project-wrapper {
-    width: 100%;
+    height: 70vh;
+}
+#section-2 .project-wrapper,
+#section-3 .project-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    padding: 0 12vw;
 }
 
 .project-description {
@@ -163,7 +177,7 @@ h1 {
 }
 
 .project-description p {
-    color: #afbda8;
+    color: #c1d2b8;
     text-align: justify;
     line-height: 1.7em;
     margin: 1em 0;
@@ -193,29 +207,49 @@ h1 {
 
 .project-video {
     width: 65%;
+    height: inherit;
+}
+
+.video-1 {
+    background-image: url("./img/annie-spratt-lRcoPGrwkv0-unsplash.jpg");
+}
+
+.video-2 {
+    background-image: url("./img/erol-ahmed-wKTF65TcReY-unsplash.jpg");
+}
+
+
+.video-1,
+.video-2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-video img {
-    width: 100%;
+    width: 90%;
     border-radius: 7px;
 }
 
+
+
 /* section 4 styling - ABOUT ME PAGE */
 #section-4 {
-    background-color: #9cb390;
     margin-top: -20px;
 }
 
 .section4-wrapper {
-    background-color: #1a271c;
     padding-bottom: 100px;
 }
 
 /* section 4 - my description styling */
 .my-description {
-    width: 100vw;
+    width: 100%;
     margin-top: 40px;
-    margin-left: -12vw;
     background-image: url("./img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -234,7 +268,6 @@ h1 {
     text-align: center;
     font-weight: 400;
     font-family: "Hanken Grotesk", sans-serif;
-    /* font-style: italic; */
     letter-spacing: 0.02em;
     margin: 0;
     color: #ecf8dc;
@@ -252,4 +285,261 @@ h1 {
 .myDescription-images img {
     height: 40px;
     width: auto;
+}
+
+/* section 4 - education details styling */
+.my-education {
+    margin-top: 80px;
+    margin-left: 12vw;
+}
+
+.education-item {
+    margin-bottom: 40px;
+}
+
+.education-title {
+    background-color: #e2af80;
+    color:#1a271c;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 12vw;
+}
+
+.education-title h4 {
+    margin: 0;
+    padding: 7px 0 7px 7vw;
+    font-size: 1rem;
+}
+
+.education-description {
+    color: #c1d2b8;
+    font-size: 1rem;
+    padding-left: 7vw;
+    width: 60%;
+    max-width: 1000px;
+    text-align: justify;
+}
+
+.education-description p {
+    line-height: 1.7em;
+    font-weight: 300;
+}
+
+.education-description span {
+    font-weight: bold;
+    color: #e2af80;
+}
+
+/* section 5 styling - CONTACT PAGE */
+#section-5 {
+    background-color: #9cb390;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: -60px;
+    margin-bottom: -60px;
+}
+
+.last-heading {
+    color: #1c2e1e;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 7vw;
+    padding: 100px 12vw 0 12vw;
+    padding-top: 100px;
+}
+
+.form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+  
+.info {
+    grid-area: info;
+}
+  
+.box {
+    display: grid;
+    
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "form info";
+    grid-gap: 5vw;
+    padding-left: 12vw;
+    margin-top: 60px;
+    color: #1c2e1e;
+}
+  
+/* form styling */
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formBox .row100 .inputBox {
+    width: 100%;
+}
+
+.inputBox input {
+    margin: 10px 0;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    color: #1c2e1e;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid #447243;
+    background: none;
+}
+
+.inputBox input::placeholder,
+.inputBox textarea::placeholder {
+    color: #447243;
+}
+  
+.inputBox input:hover,
+.inputBox input:focus,
+.inputBox textarea:hover,
+.inputBox textarea:focus {
+    border-bottom: 1.5px solid #1c2e1e;
+}
+
+.inputBox textarea {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid #447243;
+    color: #1c2e1e;
+    resize: none;
+    min-height: 120px;
+    margin-bottom: 10px;
+}
+  
+.inputBox button {
+    align-self: flex-start;
+    background: #1c2e1e;
+    color: #c1d2b8;
+    width: 200px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: "DM Sans", sans-serif;
+    padding: 15px;
+    transition: 300ms ease;
+    margin-bottom: -10px;
+}
+  
+.inputBox button:hover {
+    background: #e2af80;
+    color: #1c2e1e;
+    font-weight: 500;
+}
+
+/* info box styling */
+.info {
+    background-color: #e2af80;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 30px;
+}
+
+.info-container:first-of-type {
+    margin-top: 60px;
+}
+
+.info-container {
+    margin-bottom: 60px;
+}
+
+.info-container h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.info-container div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container div a {
+    text-decoration: none;
+    color: #1a271c;
+    padding: 5px 0;
+    width: 150px; 
+}
+
+.sociaMedia-links {
+    margin-top: -10px;
+}
+
+.info-container span {
+    margin-right: 10px;
+}
+
+.info-container p {
+    margin: 0;
+}
+
+/* social media iconify settings */
+.mdi--github {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    color: #1a271c;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transform: translateY(0.5em);
+  }
+
+.entypo-social--linkedin-with-circle {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    color: #1a271c;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transform: translateY(0.5em);
+}
+
+
+
+/* footer styling */
+footer {
+    background-color: #9cb390;
+    border-top: 1px solid #1a271c;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+
+footer div p {
+    color: #1a271c;
+    font-size: 0.9em;
+    font-weight: 900;
+    margin-left: 12vw;
 }
