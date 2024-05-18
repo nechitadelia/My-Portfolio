@@ -54,10 +54,17 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    font-size: 10.4vw;
+    font-size: 9.4vw;
     text-align: center;
     margin: 7vh 0 10vh 0;
     padding: 0 12vw;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 6rem;
+}
+
+.char {
+    transform: translateY(115px);
+    transition: transform .5s;
 }
 
 .pink-wrapper {
@@ -139,6 +146,10 @@ h1 {
     justify-content: space-between;
     align-items: end;
     gap: 20px;
+}
+
+.project-title h4 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 #section-2 .project-number {
@@ -371,6 +382,7 @@ h1 {
     position: relative;
     top: -60px;
     margin-bottom: -60px;
+    overflow: hidden;
 }
 
 .last-heading {
@@ -485,6 +497,8 @@ h1 {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 30px;
+    position: relative;
+    right: -900px;
 }
 
 .info-container:first-of-type {

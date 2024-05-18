@@ -1,3 +1,17 @@
+//smooth scroll
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
 //burger navbar appear on scroll - only if section 1 is not visible
 const section1 = document.getElementById("section-1");
 const burger = document.querySelector(".burger");
@@ -22,9 +36,7 @@ function playVideos() {
         video.play();
     });
 }
-
 playVideos();
-
 
 //cursor styling - general
 let innerCursor = document.querySelector('.inner-cursor');
@@ -90,3 +102,32 @@ logo.addEventListener("mouseover", () => {
 logo.addEventListener("mouseleave", () => {
     logo.setAttribute("src", "./src/img/Logo.png");
 });
+
+
+//h1 animation
+const myName = new SplitType("#my-name");
+const project1Name = new SplitType("#project1-name");
+const project2Name = new SplitType("#project2-name");
+
+gsap.to(".char", {
+   y: 0,
+   stagger: 0.05,
+   duration: .1 
+});
+
+
+//gsap animation - section 5 info box
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".info",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        markers: true
+    }
+});
+
+tl.to(".info", {
+    x: -900
+});
+
