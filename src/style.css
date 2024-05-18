@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 
 body {
     margin: 0;
@@ -9,6 +11,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    cursor: none;
 }
 
 h3 {
@@ -131,27 +134,46 @@ h1 {
     padding-bottom: 100px;
 }
 
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+}
+
 #section-2 .project-number {
     margin: 5vh 0;
     padding: 0 12vw;
 }
 
 #section-3 .project-number {
-    margin-bottom: 5vh;
+    margin: 5vh 0;
     padding: 0 12vw;
 }
 
 .project-number p {
-    font-size: 4em;
+    font-size: 5em;
     color: #afbda8;
-    font-family: "Hanken Grotesk", sans-serif;
+    font-family: "Oswald", sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 .project-number .horizontal-underline {
     height: 2px;
     width: 100%;
     background-color: #afbda8;
+}
+
+.project-number h4 {
+    font-size: 5em;
+    color: #afbda8;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 370;
+    font-style: normal;
 }
 
 /* project page descriptions */
@@ -162,25 +184,28 @@ h1 {
 #section-3 .project-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 50px;
     padding: 0 12vw;
 }
 
 .project-description {
-    width: 35%;
+    width: 40%;
 }
 
 .project-description h4 {
     color: #e2af80;
     margin: 0;
+    font-size: 1.2em;
 }
 
 .project-description p {
     color: #c1d2b8;
-    text-align: justify;
+    text-align: left;
     line-height: 1.7em;
-    margin: 1em 0;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
 .project-description .technologies {
@@ -206,22 +231,21 @@ h1 {
 }
 
 .project-video {
-    width: 65%;
+    width: 60%;
     height: inherit;
 }
 
 .video-1 {
-    background-image: url("./img/annie-spratt-lRcoPGrwkv0-unsplash.jpg");
+    background-image: url("./img/stephanie-harvey-80xePqQVKzs-unsplash.jpg");
 }
 
 .video-2 {
-    background-image: url("./img/erol-ahmed-wKTF65TcReY-unsplash.jpg");
+    background-image: url("./img/stephanie-harvey-aK53f8eAzck-unsplash.jpg");
 }
-
 
 .video-1,
 .video-2 {
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 7px;
@@ -230,11 +254,21 @@ h1 {
     align-items: center;
 }
 
-.project-video img {
-    width: 90%;
-    border-radius: 7px;
+.project-video a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: none;
 }
 
+.project-video a video {
+    width: 90%;
+    border-radius: 7px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.55);
+    cursor: none;
+}
 
 
 /* section 4 styling - ABOUT ME PAGE */
@@ -250,7 +284,7 @@ h1 {
 .my-description {
     width: 100%;
     margin-top: 40px;
-    background-image: url("./img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg");
+    background-image: url("./img/elena-joland-7w1KDdN75To-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -268,12 +302,11 @@ h1 {
     text-align: center;
     font-weight: 400;
     font-family: "Hanken Grotesk", sans-serif;
-    letter-spacing: 0.02em;
     margin: 0;
     color: #ecf8dc;
     line-height: 1.7em;
-    font-size: 1.2em;
-    margin: 50px 0;
+    font-size: 1.3em;
+    margin: 80px 0;
 }
 
 .myDescription-images {
@@ -480,6 +513,10 @@ h1 {
     width: 150px; 
 }
 
+.info-container div a:hover {
+    color: #e1ebdc;
+}
+
 .sociaMedia-links {
     margin-top: -10px;
 }
@@ -525,13 +562,10 @@ h1 {
     transform: translateY(0.5em);
 }
 
-
-
 /* footer styling */
 footer {
     background-color: #9cb390;
-    border-top: 1px solid #1a271c;
-    height: 60px;
+    height: 100px;
     display: flex;
     align-items: center;
 }
@@ -539,7 +573,119 @@ footer {
 
 footer div p {
     color: #1a271c;
-    font-size: 0.9em;
+    font-size: 1.5em;
     font-weight: 900;
     margin-left: 12vw;
+    margin-bottom: 0;
+}
+
+/* cursor styling */
+.inner-cursor {
+    z-index: 2000;
+    position: fixed;
+    left: 10px;
+    width: 5px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    background-color:#e68062;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.outer-cursor {
+    z-index: 2000;
+    position: fixed;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #e68062;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a271c;
+    font-size: 1rem;
+}
+
+.cursor-text {
+    color: #1a271c;
+    font-weight: 600;
+    z-index: 3000;
+    transform: translate(-50%, -50%);
+    animation: display-cursor-text 100ms normal forwards;
+}
+
+.hidden-cursor-text {
+    animation: hide-cursor-text 100ms normal forwards;
+}
+
+.outer-cursor.grow {
+    display: none;
+}
+
+.inner-cursor.grow {
+    animation: grow-cursor 300ms normal forwards ease-in-out;
+}
+
+.outer-cursor.shrink {
+    display: block;
+}
+
+.inner-cursor.shrink {
+    animation: shrink-cursor 300ms normal forwards ease-in-out;
+}
+
+@keyframes grow-cursor {
+    from{
+        width: 5px;
+        height: 5px;
+        transition: width 0.5s, height 0.5s;
+        scale: 1;
+    }
+    to{
+        width: 32px;
+        height: 32px;
+        transition: width 0.5s, height 0.5s;
+        transform: translate(-50%, -50%);
+        scale: 2;
+    }
+}
+
+@keyframes shrink-cursor {
+    from{
+        width: 32px;
+        height: 32px;
+        transition: width 0.5s, height 0.5s;
+        transform: translate(-50%, -50%);
+        scale: 2;
+    }
+    to{
+        width: 5px;
+        height: 5px;
+        transition: width 0.5s, height 0.5s;
+        scale: 1;
+    }
+}
+
+
+
+@keyframes display-cursor-text {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes hide-cursor-text {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
 }

@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="./src/navbar.css">
+    <script src="./main.js" defer></script>
     <title>Delia Nechita | Portfolio</title>
 </head>
 <body>
-    <header>
-        <a href="#section-1"><img class="logo" src="./src/img/Logo.png" alt="logo"></a>
+    <header id="header">
+        <a href="#header"><img id="logo" src="./src/img/Logo.png" alt="logo"></a>
         <nav>
             <ul class="nav-links">
                 <li class="link"><a href="#section-2" title="projects">projects</a></li>
                 <li class="link"><a href="#section-4" title="about">about</a></li>
                 <li class="link"><a href="#section-5" title="contact">contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
+        <section class="inner-cursor"></section>
+        <section class="outer-cursor">
+            <!-- <p class="cursor-text">View</p> -->
+        </section>
+
         <section id="section-1">
             <div class="section-container section1-wrapper">
                 <div>
@@ -44,19 +51,28 @@
 
         <div class="dark-background">
             <section id="section-2">
+                <div class="burger">
+                    <div class="line-container">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                    </div>
+                </div>
+                
                 <div class="section-container section2-wrapper">
                     <div class="secondary-heading">
                         <h3>PROJECTS</h3>
                     </div>
     
                     <div class="project-number">
-                        <p>01.</p>
+                        <div class="project-title">
+                            <p>01.</p>
+                            <h4>SCHOOL PLANNER</h4>
+                        </div>
                         <div class="horizontal-underline"></div>
                     </div>
     
                     <div class="project-wrapper">
                         <div class="project-description">
-                            <h4>SCHOOL PLANNER</h4>
                             <p>
                                 School Planner app is a website designed for secondary schools. It allows 
                                 users to configure their own classes, professors and subjects. More than that, 
@@ -64,7 +80,8 @@
                                 just a few clicks.
                             </p>
                             <p>
-                                The website is thus a dynamic full-stack website, hosted on Azure.
+                                The website is thus a dynamic full-stack website made to perform CRUD operations 
+                                on a database, and it is hosted on Azure.
                             </p>
     
                             <h4 class="technologies">TECHNOLOGIES</h4>
@@ -81,7 +98,11 @@
                         </div>
     
                         <div class="project-video video-1">
-                            <img src="./src/img/SchoolPlannerImg.PNG" />
+                            <a href="https://schoolplanner24.azurewebsites.net/" target="_blank">
+                                <video class="video" autoplay muted loop>
+                                    <source src="/src/img/SchoolPlannerVideo.mp4" type="video/mp4">
+                                </video>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -90,21 +111,26 @@
             <section id="section-3">
                 <div class="section-container section3-wrapper">
                     <div class="project-number">
-                        <p>02.</p>
+                        <div class="project-title">
+                            <p>02.</p>
+                            <h4>IMPROVISED ECHO</h4>
+                        </div>
                         <div class="horizontal-underline"></div>
                     </div>
     
                     <div class="project-wrapper">
                         <div class="project-description">
-                            <h4>IMPROVISED ECHO</h4>
                             <p>
-                                School Planner app is a website designed for secondary schools. It allows 
-                                users to configure their own classes, professors and subjects. More than that, 
-                                the app simplifies the process of associating professors to all classes in 
-                                just a few clicks.
+                                Improvised Echo is my first real project as a self-taught developer. It is 
+                                a presentation website and it was designed for Simona Baltog, a former opera 
+                                soloist who offers music and drama classes for children and adults, as well 
+                                as singing and piano classes. 
                             </p>
                             <p>
-                                The website is thus a dynamic full-stack website, hosted on Azure.
+                                It is a static front-end website made from scratch. The site preloader is also 
+                                my creation, the animation being done only in CSS. Overall, I wanted the website 
+                                to have a playful vibe, in order to represent the personality of its owner and 
+                                the activities that Simona has.
                             </p>
     
                             <h4 class="technologies">TECHNOLOGIES</h4>
@@ -116,10 +142,11 @@
                         </div>
     
                         <div class="project-video video-2">
-                            <!-- <video>
-                                <source src="movie.mp4" type="video/mp4">
-                            </video> -->
-                            <img src="./src/img/SchoolPlannerImg.PNG" />
+                            <a href="https://improvisedecho.fi/" target="_blank">
+                                <video class="video" muted loop>
+                                    <source src="/src/img/ImprovisedEchoVideo.mp4" type="video/mp4">
+                                </video>
+                            </a>
                         </div>
                     </div>
                 </div>

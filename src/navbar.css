@@ -19,7 +19,7 @@ nav {
     margin-right: calc(12vw - 60px);
 }
 
-.logo {
+#logo {
     cursor: pointer;
     height: 50px;
     width: 50px;
@@ -42,4 +42,70 @@ nav {
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+    transition: 300ms;
+}
+
+.nav-links li a:hover {
+    color: #1c2e1e;
+}
+
+/* burger navbar settings */
+.burger {
+    width: 60px;
+    height: 60px;
+    background-color: #e68062;
+    position: fixed;
+    top: 3vw;
+    right: 3vw;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    animation: display-burger 500ms normal forwards ease-in-out;
+    transition: 200ms;
+}
+
+.burger:hover {
+    background-color: #ffb49d;
+}
+
+@keyframes display-burger {
+    from{
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+.burger .line-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger .line1,
+.burger .line2 {
+    width: 25px;
+    height: 2px;
+    background-color: #1c2e1e;
+}
+
+.hidden-burger {
+    animation: hide-burger 500ms normal forwards ease-in-out;
+}
+
+@keyframes hide-burger {
+    from{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0, 0);
+    }
 }
