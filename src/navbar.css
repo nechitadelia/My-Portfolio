@@ -43,6 +43,7 @@ nav {
     font-weight: 800;
     font-style: normal;
     transition: 300ms;
+    cursor: none;
 }
 
 .nav-links li a:hover {
@@ -61,10 +62,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    z-index: 1000;
+    z-index: 5000;
     animation: display-burger 500ms normal forwards ease-in-out;
     transition: 200ms;
+}
+
+.burger div {
+    transition: all 0.3s ease;
 }
 
 .burger:hover {
@@ -108,4 +112,51 @@ nav {
         opacity: 0;
         transform: scale(0, 0);
     }
+}
+
+/* burger settings */
+.nav-links-burger {
+    position: fixed;
+    right: 0;
+    top: 15vh;
+    height: 90vh;
+    border-top-left-radius: 10px;
+    width: 30%;
+    margin-top: -15px;
+    background-color: #7b926f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 500ms ease-in-out;
+    z-index: 3000;
+}
+
+.nav-active {
+    transform: translateY(0%);
+    transition: 500ms ease-in-out;
+}
+
+.nav-links-burger .link {
+    margin: 30px 0; 
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-3px, 2.5px); 
+}
+
+.toggle .line2 {
+    transform: rotate(45deg) translate(-3px, -2.5px);
 }
