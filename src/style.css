@@ -323,6 +323,7 @@ h1 {
     width: 100%;
     margin-top: 40px;
     background-image: url("./img/rodion-kutsaiev-TMa_5BLvDqQ-unsplash.jpg");
+    background-position: start;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -334,9 +335,6 @@ h1 {
 }
 
 @keyframes image-reveal {
-    from {
-        background-position: start;
-    }
     to {
         background-position: center;
     }
@@ -644,7 +642,7 @@ h1 {
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     transform: translateY(0.5em);
-  }
+}
 
 .entypo-social--linkedin-with-circle {
     display: inline-block;
@@ -669,7 +667,6 @@ footer {
     display: flex;
     align-items: center;
 }
-
 
 footer div p {
     color: #1a271c;
@@ -976,6 +973,4 @@ footer div p {
     .project-number h4 {
         font-size: 4vh;
     }
-
-
 }
