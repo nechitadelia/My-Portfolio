@@ -71,7 +71,9 @@ nav {
     transition: all 0.3s ease;
 }
 
-.burger:hover {
+.burger:hover,
+.burger:focus,
+.burger:active {
     background-color: #ffb49d;
 }
 
@@ -185,8 +187,16 @@ nav {
 @media only screen and (max-width: 500px) {
     .burger {
         position: fixed;
-        top: 7vw;
-        right: 7vw;
+        top: 25px;
+        right: 40px;
+    }
+
+    .burger:hover,
+    .burger:active,
+    .burger:focus {
+        position: fixed;
+        top: 25px;
+        right: 40px;
     }
 
     .nav-links-burger {
