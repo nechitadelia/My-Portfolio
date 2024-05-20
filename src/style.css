@@ -54,12 +54,12 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    font-size: 9.4vw;
+    font-size: 10.3vw;
     text-align: center;
     margin: 7vh 0 10vh 0;
     padding: 0 12vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    line-height: 6rem;
+    line-height: 7rem;
 }
 
 .char {
