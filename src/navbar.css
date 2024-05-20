@@ -160,3 +160,36 @@ nav {
 .toggle .line2 {
     transform: rotate(45deg) translate(-3px, -2.5px);
 }
+
+@media only screen and (max-width: 800px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: right;
+        margin-right: calc(12vw - 60px);
+    }
+
+    .nav-links li {
+        float: none;
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-links li a {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .burger {
+        position: fixed;
+        top: 7vw;
+        right: 7vw;
+    }
+
+    .nav-links-burger {
+        width: 50%;
+    }
+}
