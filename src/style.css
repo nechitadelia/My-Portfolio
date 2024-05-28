@@ -311,7 +311,7 @@ h1 {
 /* section 4 styling - ABOUT ME PAGE */
 #section-4 {
     margin-top: -20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .section4-wrapper {
@@ -371,6 +371,7 @@ h1 {
 .my-education {
     margin-top: 80px;
     margin-left: 12vw;
+    overflow: hidden;
 }
 
 .education-item {
@@ -427,7 +428,7 @@ h1 {
 }
 
 .education-title h4:first-of-type {
-    max-width: 300px;
+    max-width: 650px;
 }
 
 .education-description {
@@ -763,6 +764,12 @@ footer div p {
 }
 
 @media only screen and (max-width: 1330px) {
+    /* section 1 settings - HOME PAGE */
+    .myImage-container img {
+        width: 35vh;
+        height: 35vh;
+    }
+
     /* section 2,3 settings - PROJECTS PAGE */
     #section-2 .project-wrapper,
     #section-3 .project-wrapper {
@@ -813,11 +820,6 @@ footer div p {
 
 @media only screen and (max-width: 900px) {
     /* section 1 settings - HOME PAGE */
-    .myImage-container img {
-        width: 35vh;
-        height: 35vh;
-    }
-
     .pink-wrapper .introText-container h2,
     .pink-wrapper .introText-container p {
         max-width: 30vw;
